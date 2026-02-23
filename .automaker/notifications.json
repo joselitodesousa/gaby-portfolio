@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "notifications": [
+    {
+      "id": "05476280-82d1-494a-8596-1196984bb886",
+      "type": "feature_waiting_approval",
+      "title": "Feature Ready for Review",
+      "message": "\"feature-1771856344522-jy7lyp6bzgr\" is ready for your review and approval.",
+      "createdAt": "2026-02-23T14:52:11.967Z",
+      "read": false,
+      "dismissed": false,
+      "featureId": "feature-1771856344522-jy7lyp6bzgr",
+      "projectPath": "C:\\Users\\User_UCAB\\Documents\\Desarrollo\\CLAUDE\\automaker\\data\\Gaby-website"
+    },
+    {
+      "id": "342a8eb4-7510-4f08-b69f-84759a68dd0b",
+      "type": "feature_waiting_approval",
+      "title": "Feature Ready for Review",
+      "message": "\"feature-1771872482149-noq6u80f5vg\" is ready for your review and approval.",
+      "createdAt": "2026-02-23T19:23:19.396Z",
+      "read": false,
+      "dismissed": false,
+      "featureId": "feature-1771872482149-noq6u80f5vg",
+      "projectPath": "C:\\Users\\User_UCAB\\Documents\\Desarrollo\\CLAUDE\\automaker\\data/Gaby-landpage"
+    },
+    {
+      "id": "75bfd3cd-690b-4a90-9009-613211888167",
+      "type": "feature_waiting_approval",
+      "title": "Feature Ready for Review",
+      "message": "\"feature-1771875108767-bsnz7yg6wdg\" is ready for your review and approval.",
+      "createdAt": "2026-02-23T19:35:14.629Z",
+      "read": false,
+      "dismissed": false,
+      "featureId": "feature-1771875108767-bsnz7yg6wdg",
+      "projectPath": "C:\\Users\\User_UCAB\\Documents\\Desarrollo\\CLAUDE\\automaker\\data/Gaby-landpage"
+    },
+    {
+      "id": "e6c98ae3-5968-4f7a-a4ac-cb8d7befd776",
+      "type": "feature_waiting_approval",
+      "title": "Feature Ready for Review",
+      "message": "\"feature-1771875108767-bsnz7yg6wdg\" is ready for your review and approval.",
+      "createdAt": "2026-02-23T19:50:45.004Z",
+      "read": false,
+      "dismissed": false,
+      "featureId": "feature-1771875108767-bsnz7yg6wdg",
+      "projectPath": "C:\\Users\\User_UCAB\\Documents\\Desarrollo\\CLAUDE\\automaker\\data/Gaby-landpage"
+    }
+  ]
+}

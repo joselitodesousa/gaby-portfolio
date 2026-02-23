@@ -1,0 +1,203 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  cta_text?: string;
+  cta_link?: string;
+  background_image?: string;
+}
+
+const {
+  title = "Welcome to Gaby",
+  subtitle = "Your professional landing page starts here",
+  cta_text = "Get Started",
+  cta_link = "#portfolio",
+  background_image = undefined,
+} = Astro.props;
+---
+
+<section class="hero" style={background_image ? `background-image: url('${background_image}')` : ''}>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">{title}</h1>
+      <p class="hero-subtitle">{subtitle}</p>
+      <a href={cta_link} class="cta-button">{cta_text}</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-icon">✨</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 2rem;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text {
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .hero-visual {
+    animation: slideInRight 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-icon {
+    font-size: 8rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: 2px solid white;
+  }
+
+  .cta-button:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .cta-button:active {
+    transform: translateY(0);
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem;
+      min-height: 500px;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-icon {
+      font-size: 5rem;
+    }
+
+    .cta-button {
+      padding: 0.875rem 1.75rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 3rem 1rem;
+      min-height: 400px;
+    }
+
+    .hero-title {
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-icon {
+      font-size: 3.5rem;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

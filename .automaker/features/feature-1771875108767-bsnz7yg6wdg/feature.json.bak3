@@ -1,0 +1,31 @@
+{
+  "category": "Uncategorized",
+  "description": "1. About page (/about): Create a beautiful about page with:\n- Large hero area with the communicator's name and title\n- One main profile image placeholder (use /public/avatar.jpg)\n- A second optional image placeholder (use /public/about-image.jpg)\n- Bio text section with placeholder text that user can edit\n- Personal values or philosophy section\n- Skills/expertise section\n2. Contact: Remove the /contact page entirely. Change the \"Contact\" navigation link to scroll smoothly to the footer on every page.\n3. Footer: Update footer on ALL pages to show only these social networks with icons: LinkedIn, Instagram, Telegram. Use placeholder URLs that the user can edit in the code.",
+  "title": "Create about page, update footer, remove contact page",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": true,
+  "model": "claude-haiku",
+  "thinkingLevel": "none",
+  "reasoningEffort": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "skip",
+  "requirePlanApproval": false,
+  "dependencies": [],
+  "workMode": "current",
+  "titleGenerating": false,
+  "status": "in_progress",
+  "id": "feature-1771875108767-bsnz7yg6wdg",
+  "descriptionHistory": [
+    {
+      "description": "1. About page (/about): Create a beautiful about page with:\n- Large hero area with the communicator's name and title\n- One main profile image placeholder (use /public/avatar.jpg)\n- A second optional image placeholder (use /public/about-image.jpg)\n- Bio text section with placeholder text that user can edit\n- Personal values or philosophy section\n- Skills/expertise section\n2. Contact: Remove the /contact page entirely. Change the \"Contact\" navigation link to scroll smoothly to the footer on every page.\n3. Footer: Update footer on ALL pages to show only these social networks with icons: LinkedIn, Instagram, Telegram. Use placeholder URLs that the user can edit in the code.",
+      "timestamp": "2026-02-23T19:31:49.488Z",
+      "source": "initial"
+    }
+  ],
+  "startedAt": "2026-02-23T19:48:59.498Z",
+  "updatedAt": "2026-02-23T19:35:14.615Z",
+  "justFinishedAt": "2026-02-23T19:35:14.615Z"
+}

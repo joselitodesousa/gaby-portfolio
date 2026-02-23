@@ -1,0 +1,149 @@
+---
+import '../styles/globals.css';
+import Navigation from '../components/Navigation.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    {description && <meta name="description" content={description} />}
+    <title>{title} | Gaby</title>
+  </head>
+  <body>
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Gaby. All rights reserved.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-link">
+            <span class="social-icon">in</span>
+          </a>
+          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-link">
+            <span class="social-icon">📷</span>
+          </a>
+          <a href="https://t.me/yourprofile" target="_blank" rel="noopener noreferrer" title="Telegram" class="social-link">
+            <span class="social-icon">📱</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+    scroll-behavior: smooth;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-copyright {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .footer-copyright p {
+    margin: 0;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border: 2px solid transparent;
+  }
+
+  .social-link:hover {
+    background: white;
+    color: #333;
+    transform: translateY(-3px);
+    border-color: white;
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-social {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

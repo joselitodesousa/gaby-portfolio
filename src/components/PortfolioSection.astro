@@ -1,0 +1,426 @@
+---
+interface YouTubeVideo {
+  id: string;
+  title: string;
+  description?: string;
+  thumbnail?: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  videos?: YouTubeVideo[];
+}
+
+const {
+  title = "Portfolio",
+  subtitle = "Check out our latest work and projects",
+  videos = [
+    {
+      id: "dQw4w9WgXcQ",
+      title: "Project Showcase 1",
+      description: "A stunning web design project",
+      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    },
+    {
+      id: "dQw4w9WgXcQ",
+      title: "Project Showcase 2",
+      description: "Mobile app development walkthrough",
+      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    },
+    {
+      id: "dQw4w9WgXcQ",
+      title: "Project Showcase 3",
+      description: "Digital marketing campaign",
+      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    },
+    {
+      id: "dQw4w9WgXcQ",
+      title: "Project Showcase 4",
+      description: "Brand identity and design system",
+      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    },
+  ],
+} = Astro.props;
+---
+
+<section id="portfolio" class="portfolio">
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <h2 class="section-title">{title}</h2>
+      <p class="section-subtitle">{subtitle}</p>
+    </div>
+
+    <div class="portfolio-grid">
+      {videos.map((video) => (
+        <div class="portfolio-item">
+          <div class="video-container">
+            <img
+              src={video.thumbnail}
+              alt={video.title}
+              class="video-thumbnail"
+              loading="lazy"
+            />
+            <div class="video-overlay">
+              <button
+                class="play-button"
+                data-video-id={video.id}
+                aria-label={`Play ${video.title}`}
+              >
+                <span class="play-icon">▶</span>
+              </button>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">{video.title}</h3>
+            {video.description && (
+              <p class="portfolio-description">{video.description}</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Modal for video player -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close video player">&times;</button>
+      <div class="iframe-container">
+        <iframe
+          id="youtubePlayer"
+          class="youtube-player"
+          width="100%"
+          height="600"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 6rem 2rem;
+  }
+
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .portfolio-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    background: #000;
+  }
+
+  .video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .portfolio-item:hover .video-overlay {
+    opacity: 1;
+  }
+
+  .play-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #667eea;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+
+  .play-button:hover {
+    background: #764ba2;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+
+  .play-icon {
+    font-size: 1.5rem;
+    margin-left: 3px;
+  }
+
+  .portfolio-info {
+    padding: 1.5rem;
+  }
+
+  .portfolio-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+  }
+
+  .portfolio-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow: auto;
+  }
+
+  .close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+  }
+
+  .close-button:hover {
+    transform: scale(1.2);
+  }
+
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .portfolio {
+      padding: 4rem 1.5rem;
+    }
+
+    .portfolio-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .play-button {
+      width: 50px;
+      height: 50px;
+    }
+
+    .play-icon {
+      font-size: 1.2rem;
+    }
+
+    .close-button {
+      right: 15px;
+      top: 15px;
+      font-size: 1.5rem;
+    }
+
+    .modal-content {
+      width: 95%;
+      max-height: 85vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio {
+      padding: 2.5rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .portfolio-info {
+      padding: 1rem;
+    }
+
+    .portfolio-title {
+      font-size: 1rem;
+    }
+
+    .portfolio-description {
+      font-size: 0.9rem;
+    }
+
+    .modal-content {
+      width: 98%;
+    }
+
+    .youtube-player {
+      height: 250px;
+    }
+  }
+</style>
+
+<script>
+  // Modal and video player functionality
+  const modal = document.getElementById("videoModal");
+  const youtubePlayer = document.getElementById("youtubePlayer");
+  const closeButton = document.querySelector(".close-button");
+  const playButtons = document.querySelectorAll(".play-button");
+
+  // Open modal and play video
+  playButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const videoId = button.dataset.videoId;
+      if (videoId && youtubePlayer) {
+        youtubePlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        modal?.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    });
+  });
+
+  // Close modal
+  closeButton?.addEventListener("click", () => {
+    modal?.classList.remove("active");
+    youtubePlayer!.src = "";
+    document.body.style.overflow = "auto";
+  });
+
+  // Close modal when clicking outside the content
+  modal?.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("active");
+      youtubePlayer!.src = "";
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      modal?.classList.remove("active");
+      youtubePlayer!.src = "";
+      document.body.style.overflow = "auto";
+    }
+  });
+</script>

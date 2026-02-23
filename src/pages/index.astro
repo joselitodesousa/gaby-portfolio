@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import PortfolioSection from '../components/PortfolioSection.astro';
+---
+
+<BaseLayout
+  title="Home"
+  description="Welcome to Gaby - Your perfect landing page. Explore our portfolio, learn about us, and get started today."
+>
+	<HeroSection
+		title="Welcome to Gaby"
+		subtitle="Create beautiful, professional digital experiences with us"
+		cta_text="View Our Work"
+		cta_link="#portfolio"
+	/>
+
+	<AboutSection
+		title="About Gaby"
+		subtitle="Who We Are"
+		description="We're a team of talented designers and developers passionate about creating stunning digital experiences. With years of experience in web design, development, and digital marketing, we help businesses like yours succeed in the digital world."
+		features={[
+			{
+				icon: "🎯",
+				title: "Focused Strategy",
+				description: "We align our work with your business goals to ensure real results.",
+			},
+			{
+				icon: "💡",
+				title: "Creative Design",
+				description: "Beautiful, modern designs that engage and convert your audience.",
+			},
+			{
+				icon: "🚀",
+				title: "Quick Delivery",
+				description: "Fast turnaround times without compromising on quality.",
+			},
+			{
+				icon: "🤝",
+				title: "True Partnership",
+				description: "We're invested in your success and committed to your growth.",
+			},
+		]}
+		image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop"
+	/>
+
+	<PortfolioSection
+		title="Our Portfolio"
+		subtitle="Check out some of our latest work and projects"
+		videos={[
+			{
+				id: "dQw4w9WgXcQ",
+				title: "Web Design Showcase",
+				description: "A comprehensive look at our latest web design project",
+				thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+			},
+			{
+				id: "dQw4w9WgXcQ",
+				title: "Mobile App Development",
+				description: "Behind-the-scenes of our mobile application development process",
+				thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+			},
+			{
+				id: "dQw4w9WgXcQ",
+				title: "E-Commerce Platform",
+				description: "Building a scalable e-commerce solution from the ground up",
+				thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+			},
+			{
+				id: "dQw4w9WgXcQ",
+				title: "Brand Identity",
+				description: "Complete branding and design system implementation",
+				thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+			},
+		]}
+	/>
+</BaseLayout>

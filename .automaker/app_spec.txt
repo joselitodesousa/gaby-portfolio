@@ -1,0 +1,103 @@
+<project_specification>
+  <project_name>Gaby-landpage</project_name>
+
+  <overview>
+    Describe your project here. This file will be analyzed by an AI agent
+    to understand your project structure and tech stack.
+  </overview>
+
+  <technology_stack>
+    <!-- The AI agent will fill this in after analyzing your project -->
+  </technology_stack>
+
+  <core_capabilities>
+    <!-- List core features and capabilities -->
+  </core_capabilities>
+
+  <implemented_features>
+    <feature>
+      <name>Gaby portafolio</name>
+      <description>Create a portfolio website for a social communicator using Astro and Tailwind CSS. Requirements:
+MAIN PAGE (index.astro):
+- Hero section with circular avatar image (/public/avatar.jpg) and name/title
+- About/Bio section
+- Portfolio section with embedded YouTube video examples
+- Footer with social media icons: LinkedIn, Instagram, Twitter/X, YouTube, Facebook (placeholder URLs)
+- Contáctame button scrolls smoothly to footer
+CV PAGE (/cv):
+- Header with name, profession, email, phone, location, and social links
+- Professional Summary section
+- Work Experience section (2-3 example entries with company, role, dates, bullet points)
+- Education section (1-2 example entries)
+- Skills section (journalism, video production, social media, etc.)
+- Awards &amp; Recognition section
+- Print button to print/save as PDF
+- Clean, professional, printable layout
+BLOG PAGE (/blog):
+- Attractive &quot;Coming Soon&quot; page with warm design
+NAVIGATION: Home, CV (/cv), Blog (/blog), Contáctame (scrolls to footer)
+Design: warm colors (coral #FF6B6B, amber #FFB347, cream #FFF8E7), modern, fresh, mobile-first responsive
+Use ONLY: Astro and Tailwind CSS. Works with npm run dev. Ready for Vercel.</description>
+    </feature>
+    <feature>
+      <name>Gaby portafolio</name>
+      <description>Create a portfolio website for a social communicator using Astro and Tailwind CSS. Requirements:
+MAIN PAGE (index.astro):
+- Hero section with circular avatar image (/public/avatar.jpg) and name/title
+- About/Bio section
+- Portfolio section with embedded YouTube video examples
+- Footer with social media icons: LinkedIn, Instagram, Twitter/X, YouTube, Facebook (placeholder URLs)
+- Contáctame button scrolls smoothly to footer
+CV PAGE (/cv):
+- Header with name, profession, email, phone, location, and social links
+- Professional Summary section
+- Work Experience section (2-3 example entries with company, role, dates, bullet points)
+- Education section (1-2 example entries)
+- Skills section (journalism, video production, social media, etc.)
+- Awards &amp; Recognition section
+- Print button to print/save as PDF
+- Clean, professional, printable layout
+BLOG PAGE (/blog):
+- Attractive &quot;Coming Soon&quot; page with warm design
+NAVIGATION: Home, CV (/cv), Blog (/blog), Contáctame (scrolls to footer)
+Design: warm colors (coral #FF6B6B, amber #FFB347, cream #FFF8E7), modern, fresh, mobile-first responsive
+Use ONLY: Astro and Tailwind CSS. Works with npm run dev. Ready for Vercel.</description>
+    </feature>
+    <feature>
+      <name>Gaby portafolio</name>
+      <description>Create a portfolio website for a social communicator using Astro and Tailwind CSS. Requirements:
+MAIN PAGE (index.astro):
+- Hero section with circular avatar image (/public/avatar.jpg) and name/title
+- About/Bio section
+- Portfolio section with embedded YouTube video examples
+- Footer with social media icons: LinkedIn, Instagram, Twitter/X, YouTube, Facebook (placeholder URLs)
+- Contáctame button scrolls smoothly to footer
+CV PAGE (/cv):
+- Header with name, profession, email, phone, location, and social links
+- Professional Summary section
+- Work Experience section (2-3 example entries with company, role, dates, bullet points)
+- Education section (1-2 example entries)
+- Skills section (journalism, video production, social media, etc.)
+- Awards &amp; Recognition section
+- Print button to print/save as PDF
+- Clean, professional, printable layout
+BLOG PAGE (/blog):
+- Attractive &quot;Coming Soon&quot; page with warm design
+NAVIGATION: Home, CV (/cv), Blog (/blog), Contáctame (scrolls to footer)
+Design: warm colors (coral #FF6B6B, amber #FFB347, cream #FFF8E7), modern, fresh, mobile-first responsive
+Use ONLY: Astro and Tailwind CSS. Works with npm run dev. Ready for Vercel.</description>
+    </feature>
+    <feature>
+      <name>Create about page, update footer, remove contact page</name>
+      <description>1. About page (/about): Create a beautiful about page with:
+- Large hero area with the communicator&apos;s name and title
+- One main profile image placeholder (use /public/avatar.jpg)
+- A second optional image placeholder (use /public/about-image.jpg)
+- Bio text section with placeholder text that user can edit
+- Personal values or philosophy section
+- Skills/expertise section
+2. Contact: Remove the /contact page entirely. Change the &quot;Contact&quot; navigation link to scroll smoothly to the footer on every page.
+3. Footer: Update footer on ALL pages to show only these social networks with icons: LinkedIn, Instagram, Telegram. Use placeholder URLs that the user can edit in the code.</description>
+    </feature>
+  </implemented_features>
+</project_specification>

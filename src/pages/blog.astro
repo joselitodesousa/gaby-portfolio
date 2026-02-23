@@ -1,0 +1,678 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Blog"
+  description="Coming Soon - Explore our latest insights, tutorials, and stories about design, development, and digital innovation."
+>
+  <div class="blog-coming-soon">
+    <div class="warm-gradient-bg"></div>
+
+    <div class="content-wrapper">
+      <div class="content-box">
+        <div class="content-left">
+          <h1 class="blog-title">Blog Coming Soon</h1>
+          <p class="blog-subtitle">We're working on something amazing</p>
+
+          <div class="description-text">
+            <p>Get ready for fresh insights, inspiring stories, and practical guides on design, development, and digital innovation. Our blog will be your go-to resource for tips, trends, and techniques to elevate your digital presence.</p>
+          </div>
+
+          <div class="features">
+            <div class="feature-item">
+              <div class="feature-icon">📝</div>
+              <div class="feature-content">
+                <h3>Expert Articles</h3>
+                <p>In-depth guides and tutorials from industry experts</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">💡</div>
+              <div class="feature-content">
+                <h3>Design Insights</h3>
+                <p>Discover latest trends and best practices in design</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">🚀</div>
+              <div class="feature-content">
+                <h3>Dev Tutorials</h3>
+                <p>Learn modern technologies and development techniques</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">🎯</div>
+              <div class="feature-content">
+                <h3>Case Studies</h3>
+                <p>Real-world examples and success stories</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-section">
+            <p class="cta-label">Stay Updated</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                class="email-input"
+                aria-label="Email address"
+              />
+              <button type="submit" class="submit-btn">Notify Me</button>
+            </form>
+            <p class="form-hint">We'll let you know when the blog launches</p>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <div class="illustration">
+            <div class="blog-icon-container">
+              <div class="blog-icon">📚</div>
+              <div class="floating-element float-1">✍️</div>
+              <div class="floating-element float-2">💭</div>
+              <div class="floating-element float-3">🔥</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-section">
+      <h2 class="timeline-title">What's Coming</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Design & UX Articles</h3>
+            <p>Master the art of creating beautiful and user-friendly interfaces</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Development Guides</h3>
+            <p>Deep dive into modern web technologies and best practices</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Success Stories</h3>
+            <p>Learn from our clients' journeys and achievements</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Industry Insights</h3>
+            <p>Stay ahead with latest trends and innovations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-coming-soon {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .warm-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 25%, #d4845a 50%, #e8734f 75%, #f4a460 100%);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 2rem;
+  }
+
+  .content-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  .content-left {
+    animation: slideInFromLeft 0.8s ease-out;
+  }
+
+  .content-right {
+    animation: slideInFromRight 0.8s ease-out;
+  }
+
+  .blog-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #d94f3c 0%, #f4a460 50%, #d4845a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .blog-subtitle {
+    font-size: 1.5rem;
+    color: #8b6f47;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .description-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 2.5rem;
+  }
+
+  .description-text p {
+    margin: 0;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 154, 86, 0.08) 0%, rgba(244, 164, 96, 0.08) 100%);
+    border-left: 4px solid #ff9a56;
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover {
+    transform: translateX(8px);
+    border-left-color: #d94f3c;
+    background: linear-gradient(135deg, rgba(217, 79, 60, 0.12) 0%, rgba(244, 164, 96, 0.12) 100%);
+  }
+
+  .feature-icon {
+    font-size: 1.75rem;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .feature-content h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.35rem 0;
+    color: #2c2c2c;
+    font-weight: 700;
+  }
+
+  .feature-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .cta-section {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #fff5f1 0%, #ffe8dc 100%);
+    border: 2px solid rgba(255, 154, 86, 0.3);
+  }
+
+  .cta-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #d94f3c;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 1rem 0;
+    display: block;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .email-input {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    border: 2px solid rgba(255, 154, 86, 0.4);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: white;
+  }
+
+  .email-input:focus {
+    outline: none;
+    border-color: #ff9a56;
+    box-shadow: 0 0 0 3px rgba(255, 154, 86, 0.1);
+  }
+
+  .email-input::placeholder {
+    color: #999;
+  }
+
+  .submit-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff9a56 0%, #f4a460 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 154, 86, 0.3);
+    white-space: nowrap;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 154, 86, 0.4);
+    background: linear-gradient(135deg, #ff7c42 0%, #f29142 100%);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .form-hint {
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0;
+    text-align: center;
+  }
+
+  .illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .blog-icon-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blog-icon {
+    font-size: 8rem;
+    animation: bounce 3s ease-in-out infinite;
+  }
+
+  .floating-element {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .float-1 {
+    top: 20px;
+    right: 30px;
+    animation-delay: 0s;
+  }
+
+  .float-2 {
+    bottom: 40px;
+    left: 20px;
+    animation-delay: 1s;
+  }
+
+  .float-3 {
+    top: 50%;
+    right: -20px;
+    animation-delay: 2s;
+  }
+
+  .timeline-section {
+    background: linear-gradient(135deg, #fff5f1 0%, #ffe8dc 100%);
+    border-radius: 20px;
+    padding: 4rem 2.5rem;
+    margin: 4rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .timeline-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c2c2c;
+    font-weight: 800;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9a56 0%, #f4a460 100%);
+    margin-top: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(255, 154, 86, 0.2);
+  }
+
+  .timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 40px;
+    width: 2px;
+    height: calc(100% + 24px);
+    background: linear-gradient(180deg, #ff9a56 0%, #f4a460 100%);
+  }
+
+  .timeline-item {
+    position: relative;
+  }
+
+  .timeline-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2c2c2c;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .timeline-content p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Animations */
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(10deg);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .content-box {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .illustration {
+      min-height: 300px;
+    }
+
+    .blog-icon-container {
+      width: 200px;
+      height: 200px;
+    }
+
+    .blog-icon {
+      font-size: 6rem;
+    }
+
+    .floating-element {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+      padding: 2rem 1rem;
+    }
+
+    .content-box {
+      margin-bottom: 3rem;
+    }
+
+    .blog-title {
+      font-size: 2rem;
+    }
+
+    .blog-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .description-text {
+      font-size: 1rem;
+    }
+
+    .cta-section {
+      padding: 1.5rem;
+    }
+
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .submit-btn {
+      width: 100%;
+    }
+
+    .timeline-section {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item {
+      gap: 1.25rem;
+    }
+
+    .blog-icon-container {
+      width: 150px;
+      height: 150px;
+    }
+
+    .blog-icon {
+      font-size: 4rem;
+    }
+
+    .float-1,
+    .float-2,
+    .float-3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content-wrapper {
+      padding: 1.5rem 1rem;
+    }
+
+    .blog-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .blog-subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .description-text {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .features {
+      gap: 1rem;
+    }
+
+    .feature-item {
+      padding: 1rem;
+      gap: 0.75rem;
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      min-width: 35px;
+    }
+
+    .feature-content h3 {
+      font-size: 0.95rem;
+    }
+
+    .feature-content p {
+      font-size: 0.85rem;
+    }
+
+    .cta-section {
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .email-input {
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .submit-btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-hint {
+      font-size: 0.8rem;
+    }
+
+    .timeline-section {
+      padding: 2rem 1rem;
+      margin: 2rem 0;
+    }
+
+    .timeline-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline {
+      gap: 1.5rem;
+    }
+
+    .timeline-item {
+      gap: 1rem;
+    }
+
+    .timeline-content h3 {
+      font-size: 1rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.9rem;
+    }
+
+    .blog-icon-container {
+      width: 120px;
+      height: 120px;
+    }
+
+    .blog-icon {
+      font-size: 3rem;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('newsletterForm');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = form.querySelector('.email-input') as HTMLInputElement;
+      const email = emailInput.value;
+
+      if (email) {
+        // Show success message
+        const originalText = form.querySelector('.submit-btn')?.textContent;
+        const submitBtn = form.querySelector('.submit-btn') as HTMLButtonElement;
+        submitBtn.textContent = 'Email Saved! ✓';
+        submitBtn.style.background = 'linear-gradient(135deg, #4caf50 0%, #45a049 100%)';
+
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          emailInput.value = '';
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = 'linear-gradient(135deg, #ff9a56 0%, #f4a460 100%)';
+        }, 3000);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,361 @@
+---
+interface Props {
+  profileImage?: string;
+  secondaryImage?: string;
+  bio?: string;
+  values?: Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
+  skills?: string[];
+}
+
+const {
+  profileImage = "/avatar.jpg",
+  secondaryImage = "/about-image.jpg",
+  bio = "I'm a passionate communicator dedicated to creating meaningful connections and sharing valuable insights. With years of experience in my field, I combine creativity with strategic thinking to deliver exceptional results. My journey has been driven by a commitment to continuous learning and making a positive impact.",
+  values = [
+    {
+      icon: "🎯",
+      title: "Purpose-Driven",
+      description: "Everything I do is guided by a clear sense of purpose and commitment to excellence.",
+    },
+    {
+      icon: "💡",
+      title: "Innovation",
+      description: "I embrace creative thinking and look for new ways to solve problems and create value.",
+    },
+    {
+      icon: "🤝",
+      title: "Collaboration",
+      description: "I believe in the power of teamwork and building strong relationships with those I work with.",
+    },
+    {
+      icon: "🌱",
+      title: "Growth",
+      description: "I'm committed to continuous learning and personal development in all areas of life.",
+    },
+  ],
+  skills = [
+    "Communication",
+    "Leadership",
+    "Strategic Thinking",
+    "Content Creation",
+    "Project Management",
+    "Problem Solving",
+    "Public Speaking",
+    "Creative Writing",
+  ],
+} = Astro.props;
+---
+
+<section id="about-content" class="about-content">
+  <div class="about-container">
+    <!-- Bio Section with Images -->
+    <div class="bio-section">
+      <div class="images-column">
+        <div class="profile-image-wrapper">
+          <img src={profileImage} alt="Profile" class="profile-image" />
+        </div>
+        <div class="secondary-image-wrapper">
+          <img src={secondaryImage} alt="About" class="secondary-image" />
+        </div>
+      </div>
+
+      <div class="text-column">
+        <h2 class="section-title">Get to Know Me</h2>
+        <p class="bio-text">{bio}</p>
+
+        <!-- Values/Philosophy Section -->
+        <h3 class="subsection-title">My Philosophy</h3>
+        <div class="values-grid">
+          {values.map((value) => (
+            <div class="value-card">
+              <div class="value-icon">{value.icon}</div>
+              <h4 class="value-title">{value.title}</h4>
+              <p class="value-description">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+      <h3 class="subsection-title">Skills & Expertise</h3>
+      <div class="skills-grid">
+        {skills.map((skill) => (
+          <div class="skill-badge">{skill}</div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    background: white;
+    padding: 4rem 2rem;
+  }
+
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .subsection-title {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    font-weight: 600;
+  }
+
+  /* Bio Section */
+  .bio-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+
+  .images-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .profile-image-wrapper {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .profile-image:hover {
+    transform: scale(1.02);
+  }
+
+  .secondary-image-wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .secondary-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .secondary-image:hover {
+    transform: scale(1.02);
+  }
+
+  .text-column {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  .bio-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  /* Values/Philosophy Grid */
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .value-card {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #f9fafb 100%);
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .value-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .value-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Skills Section */
+  .skills-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #f9fafb 100%);
+    padding: 3rem;
+    border-radius: 16px;
+    margin-top: 4rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-badge {
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .skill-badge:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .subsection-title {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .bio-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .value-card {
+      padding: 1.5rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-content {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .subsection-title {
+      font-size: 1.25rem;
+    }
+
+    .bio-text {
+      font-size: 1rem;
+    }
+
+    .value-icon {
+      font-size: 2rem;
+    }
+
+    .value-title {
+      font-size: 1rem;
+    }
+
+    .value-description {
+      font-size: 0.9rem;
+    }
+
+    .skill-badge {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .skills-section {
+      padding: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,798 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Education {
+  degree: string;
+  school: string;
+  year: string;
+  description?: string;
+}
+
+interface Experience {
+  title: string;
+  company: string;
+  period: string;
+  description?: string;
+  highlights?: string[];
+}
+
+interface Skill {
+  category: string;
+  items: string[];
+}
+
+interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  link?: string;
+}
+
+const cvData = {
+  personalInfo: {
+    name: "Gabriela Rodriguez",
+    title: "Full-Stack Developer & Digital Designer",
+    email: "contact@gaby.dev",
+    phone: "+1 (555) 123-4567",
+    location: "San Francisco, CA",
+    website: "https://gaby.dev",
+    bio: "Passionate full-stack developer with 5+ years of experience creating beautiful, functional digital experiences. Specialized in modern web technologies and user-centered design.",
+  },
+
+  experience: [
+    {
+      title: "Senior Developer",
+      company: "TechCorp Solutions",
+      period: "2022 - Present",
+      description: "Lead full-stack development projects and mentor junior developers",
+      highlights: [
+        "Architected microservices platform using Node.js and Docker",
+        "Improved application performance by 40% through optimization",
+        "Led team of 5 developers to deliver 3 major projects on time",
+        "Implemented CI/CD pipeline reducing deployment time by 60%",
+      ],
+    },
+    {
+      title: "Full-Stack Developer",
+      company: "Digital Innovations Inc",
+      period: "2020 - 2022",
+      description: "Developed and maintained web applications for enterprise clients",
+      highlights: [
+        "Built responsive web applications using React and Node.js",
+        "Designed and implemented REST APIs handling 10M+ requests/month",
+        "Collaborated with UX team to create user-centric interfaces",
+        "Implemented automated testing increasing code coverage to 85%",
+      ],
+    },
+    {
+      title: "Junior Developer",
+      company: "StartupXYZ",
+      period: "2019 - 2020",
+      description: "Contributed to frontend and backend development",
+      highlights: [
+        "Developed new features for customer-facing web platform",
+        "Fixed critical bugs and improved code quality",
+        "Learned and applied modern development best practices",
+      ],
+    },
+  ] as Experience[],
+
+  education: [
+    {
+      degree: "Bachelor of Science in Computer Science",
+      school: "University of California",
+      year: "2019",
+      description: "Graduated with distinction. Focus on Software Engineering and Web Technologies.",
+    },
+    {
+      degree: "Professional Certification",
+      school: "Google Cloud Academy",
+      year: "2021",
+      description: "Cloud Architecture and Development certification",
+    },
+  ] as Education[],
+
+  skills: [
+    {
+      category: "Frontend",
+      items: ["React", "TypeScript", "Astro", "HTML/CSS", "Responsive Design", "Vue.js", "Next.js"],
+    },
+    {
+      category: "Backend",
+      items: ["Node.js", "Python", "Express.js", "MongoDB", "PostgreSQL", "GraphQL"],
+    },
+    {
+      category: "DevOps & Tools",
+      items: ["Docker", "Kubernetes", "Git", "AWS", "CI/CD", "Linux"],
+    },
+    {
+      category: "Design",
+      items: ["UI/UX Design", "Figma", "Responsive Design", "Accessibility", "Web Performance"],
+    },
+  ] as Skill[],
+
+  projects: [
+    {
+      name: "E-Commerce Platform",
+      description: "Full-stack e-commerce solution with real-time inventory management and payment integration",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      link: "#",
+    },
+    {
+      name: "Analytics Dashboard",
+      description: "Real-time analytics dashboard for tracking business metrics and user behavior",
+      technologies: ["React", "GraphQL", "PostgreSQL", "D3.js"],
+      link: "#",
+    },
+    {
+      name: "Mobile App",
+      description: "Cross-platform mobile application for task management and collaboration",
+      technologies: ["React Native", "Firebase", "Redux"],
+      link: "#",
+    },
+    {
+      name: "Content Management System",
+      description: "Headless CMS with intuitive admin interface and powerful API",
+      technologies: ["Next.js", "GraphQL", "PostgreSQL", "AWS"],
+      link: "#",
+    },
+  ] as Project[],
+
+  languages: ["English (Native)", "Spanish (Fluent)", "French (Intermediate)"],
+  certifications: [
+    "AWS Certified Solutions Architect",
+    "Google Cloud Professional Cloud Architect",
+    "SCRUM Master Certification",
+  ],
+};
+---
+
+<BaseLayout
+  title="CV - Gabriela Rodriguez"
+  description="Professional CV of Gabriela Rodriguez - Full-Stack Developer and Digital Designer"
+>
+  <div class="cv-container">
+    <!-- Header Section -->
+    <header class="cv-header">
+      <div class="header-content">
+        <h1 class="name">{cvData.personalInfo.name}</h1>
+        <p class="title">{cvData.personalInfo.title}</p>
+        <p class="bio">{cvData.personalInfo.bio}</p>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="label">Email:</span>
+          <a href={`mailto:${cvData.personalInfo.email}`}>{cvData.personalInfo.email}</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">Phone:</span>
+          <a href={`tel:${cvData.personalInfo.phone}`}>{cvData.personalInfo.phone}</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">Location:</span>
+          <span>{cvData.personalInfo.location}</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Website:</span>
+          <a href={cvData.personalInfo.website} target="_blank">{cvData.personalInfo.website}</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="cv-content">
+      <!-- Experience Section -->
+      <section class="cv-section">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-list">
+          {cvData.experience.map((job) => (
+            <div class="experience-item">
+              <div class="job-header">
+                <h3 class="job-title">{job.title}</h3>
+                <span class="job-period">{job.period}</span>
+              </div>
+              <p class="job-company">{job.company}</p>
+              {job.description && <p class="job-description">{job.description}</p>}
+              {job.highlights && (
+                <ul class="job-highlights">
+                  {job.highlights.map((highlight) => (
+                    <li>{highlight}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="cv-section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-list">
+          {cvData.education.map((edu) => (
+            <div class="education-item">
+              <div class="edu-header">
+                <h3 class="edu-degree">{edu.degree}</h3>
+                <span class="edu-year">{edu.year}</span>
+              </div>
+              <p class="edu-school">{edu.school}</p>
+              {edu.description && <p class="edu-description">{edu.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="cv-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          {cvData.skills.map((skillGroup) => (
+            <div class="skill-category">
+              <h3 class="category-title">{skillGroup.category}</h3>
+              <div class="skill-items">
+                {skillGroup.items.map((skill) => (
+                  <span class="skill-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="cv-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          {cvData.projects.map((project) => (
+            <div class="project-card">
+              <h3 class="project-name">{project.name}</h3>
+              <p class="project-description">{project.description}</p>
+              <div class="project-technologies">
+                {project.technologies.map((tech) => (
+                  <span class="tech-badge">{tech}</span>
+                ))}
+              </div>
+              {project.link && (
+                <a href={project.link} class="project-link">View Project →</a>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Languages Section -->
+      <section class="cv-section">
+        <h2 class="section-title">Languages</h2>
+        <div class="languages-list">
+          {cvData.languages.map((language) => (
+            <div class="language-item">
+              <span>{language}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section class="cv-section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-list">
+          {cvData.certifications.map((cert) => (
+            <div class="certification-item">
+              <span class="cert-badge">✓</span>
+              <span>{cert}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <!-- Print Button -->
+    <div class="print-button-container">
+      <button class="print-button" onclick="window.print()">
+        🖨️ Print or Save as PDF
+      </button>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .cv-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Header Section */
+  .cv-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0.5rem 0 0 0;
+    opacity: 0.95;
+  }
+
+  .bio {
+    font-size: 0.95rem;
+    margin: 1rem 0 0 0;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .contact-item .label {
+    font-weight: 600;
+    min-width: 70px;
+  }
+
+  .contact-item a {
+    color: white;
+    text-decoration: none;
+    word-break: break-all;
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-item a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  /* Content Section */
+  .cv-content {
+    padding: 2rem;
+  }
+
+  .cv-section {
+    margin-bottom: 2rem;
+  }
+
+  .cv-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+  }
+
+  /* Experience Items */
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  .experience-item {
+    border-left: 4px solid #667eea;
+    padding-left: 1.5rem;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+
+  .job-period {
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  .job-company {
+    font-weight: 600;
+    color: #667eea;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .job-description {
+    color: #555;
+    margin: 0.5rem 0 0.8rem 0;
+    font-size: 0.95rem;
+  }
+
+  .job-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .job-highlights li {
+    color: #555;
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .job-highlights li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+  }
+
+  /* Education Items */
+  .education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .education-item {
+    border-left: 4px solid #764ba2;
+    padding-left: 1.5rem;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .edu-degree {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+
+  .edu-year {
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  .edu-school {
+    font-weight: 600;
+    color: #764ba2;
+    margin: 0 0 0.3rem 0;
+    font-size: 0.95rem;
+  }
+
+  .edu-description {
+    color: #555;
+    margin: 0.3rem 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-category {
+    background: #f9f9f9;
+    padding: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+  }
+
+  .category-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .skill-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: #f9f9f9;
+    border: 2px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  }
+
+  .project-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .project-description {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-badge {
+    background: white;
+    border: 1px solid #667eea;
+    color: #667eea;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .project-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .project-link:hover {
+    color: #764ba2;
+  }
+
+  /* Languages and Certifications */
+  .languages-list,
+  .certifications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .language-item,
+  .certification-item {
+    background: #f9f9f9;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cert-badge {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  /* Print Button */
+  .print-button-container {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .print-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  .print-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  }
+
+  .print-button:active {
+    transform: translateY(0);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cv-container {
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .cv-header {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem 1.5rem;
+    }
+
+    .name {
+      font-size: 2rem;
+    }
+
+    .title {
+      font-size: 1.1rem;
+    }
+
+    .cv-content {
+      padding: 1.5rem;
+    }
+
+    .job-header,
+    .edu-header {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .job-period,
+    .edu-year {
+      width: fit-content;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .languages-list,
+    .certifications-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Print Styles */
+  @media print {
+    .cv-container {
+      max-width: 100%;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      background: white;
+    }
+
+    .print-button-container {
+      display: none;
+    }
+
+    body {
+      background: white;
+      padding: 0;
+    }
+
+    main {
+      padding: 0;
+      margin: 0;
+      max-width: none;
+      width: 100%;
+    }
+
+    footer {
+      display: none;
+    }
+
+    .cv-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      page-break-after: avoid;
+    }
+
+    .cv-section {
+      page-break-inside: avoid;
+    }
+
+    .experience-item,
+    .education-item {
+      page-break-inside: avoid;
+    }
+
+    .section-title {
+      page-break-after: avoid;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .skill-tag {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .tech-badge {
+      border-color: #667eea;
+      color: #667eea;
+    }
+
+    /* Optimize for A4 page */
+    @page {
+      margin: 0.5in;
+      size: A4;
+    }
+  }
+</style>

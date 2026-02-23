@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import AboutContent from '../components/AboutContent.astro';
+---
+
+<BaseLayout title="About" description="Learn more about Gaby, my journey, values, and expertise.">
+  <HeroSection
+    title="About Me"
+    subtitle="Passionate about creating meaningful connections and sharing valuable insights"
+    cta_text="Let's Connect"
+    cta_link="#footer"
+  />
+  <AboutContent
+    profileImage="/avatar.jpg"
+    secondaryImage="/about-image.jpg"
+    bio="I'm a passionate communicator dedicated to creating meaningful connections and sharing valuable insights. With years of experience in my field, I combine creativity with strategic thinking to deliver exceptional results. My journey has been driven by a commitment to continuous learning and making a positive impact in everything I do."
+    values={[
+      {
+        icon: "🎯",
+        title: "Purpose-Driven",
+        description: "Everything I do is guided by a clear sense of purpose and commitment to excellence.",
+      },
+      {
+        icon: "💡",
+        title: "Innovation",
+        description: "I embrace creative thinking and look for new ways to solve problems and create value.",
+      },
+      {
+        icon: "🤝",
+        title: "Collaboration",
+        description: "I believe in the power of teamwork and building strong relationships.",
+      },
+      {
+        icon: "🌱",
+        title: "Growth",
+        description: "I'm committed to continuous learning and personal development.",
+      },
+    ]}
+    skills={[
+      "Communication",
+      "Leadership",
+      "Strategic Thinking",
+      "Content Creation",
+      "Project Management",
+      "Problem Solving",
+      "Public Speaking",
+      "Creative Writing",
+    ]}
+  />
+</BaseLayout>

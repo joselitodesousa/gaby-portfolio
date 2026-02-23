@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "id": "evt-1771876245015-dd0a6169",
+      "trigger": "feature_success",
+      "timestamp": "2026-02-23T19:50:45.015Z",
+      "featureName": "Create about page, update footer, remove contact page",
+      "featureId": "feature-1771875108767-bsnz7yg6wdg"
+    },
+    {
+      "id": "evt-1771875333862-4853627c",
+      "trigger": "feature_success",
+      "timestamp": "2026-02-23T19:35:33.862Z",
+      "featureName": "Create about page, update footer, remove contact page",
+      "featureId": "feature-1771875108767-bsnz7yg6wdg"
+    },
+    {
+      "id": "evt-1771875109514-5b782dde",
+      "trigger": "feature_created",
+      "timestamp": "2026-02-23T19:31:49.514Z",
+      "featureName": "Untitled Feature",
+      "featureId": "feature-1771875108767-bsnz7yg6wdg"
+    },
+    {
+      "id": "evt-1771874623382-e6318174",
+      "trigger": "feature_success",
+      "timestamp": "2026-02-23T19:23:43.382Z",
+      "featureName": "Gaby portafolio ",
+      "featureId": "feature-1771872482149-noq6u80f5vg"
+    },
+    {
+      "id": "evt-1771872482270-dbdcb8fd",
+      "trigger": "feature_created",
+      "timestamp": "2026-02-23T18:48:02.270Z",
+      "featureName": "Gaby portafolio ",
+      "featureId": "feature-1771872482149-noq6u80f5vg"
+    },
+    {
+      "id": "evt-1771856344957-752ac2bf",
+      "trigger": "feature_created",
+      "timestamp": "2026-02-23T14:19:04.957Z",
+      "featureName": "Portafolio Gabriela De Sousa",
+      "featureId": "feature-1771856344522-jy7lyp6bzgr"
+    }
+  ]
+}
