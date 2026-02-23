@@ -44,6 +44,17 @@
       "dismissed": false,
       "featureId": "feature-1771875108767-bsnz7yg6wdg",
       "projectPath": "C:\\Users\\User_UCAB\\Documents\\Desarrollo\\CLAUDE\\automaker\\data/Gaby-landpage"
+    },
+    {
+      "id": "34268c63-5ea5-4a84-873b-647eb496cd95",
+      "type": "feature_waiting_approval",
+      "title": "Feature Ready for Review",
+      "message": "\"feature-1771877717782-i47kvqko61p\" is ready for your review and approval.",
+      "createdAt": "2026-02-23T20:21:31.136Z",
+      "read": false,
+      "dismissed": false,
+      "featureId": "feature-1771877717782-i47kvqko61p",
+      "projectPath": "C:\\Users\\User_UCAB\\Documents\\Desarrollo\\CLAUDE\\automaker\\data/Gaby-landpage"
     }
   ]
 }

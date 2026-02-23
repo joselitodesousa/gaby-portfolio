@@ -1,0 +1,66 @@
+{
+  "category": "Uncategorized",
+  "description": "In the Portfolio section of the landing page, add 3 embedded YouTube video cards. Each card should have:\n- A YouTube video embedded using an iframe (use these example video IDs: dQw4w9WgXcQ, jNQXAC9IVRw, 9bZkp7q19f0)\n- A title below the video\n- A short description\n- Warm card design with shadow and rounded corners\nThe user will replace the video IDs with their own. Make it easy to find where to edit them in the code.",
+  "title": "Add YouTube video cards to portfolio section",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": true,
+  "model": "claude-haiku",
+  "thinkingLevel": "none",
+  "reasoningEffort": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "spec",
+  "requirePlanApproval": true,
+  "dependencies": [],
+  "workMode": "current",
+  "titleGenerating": false,
+  "status": "in_progress",
+  "id": "feature-1771877717782-i47kvqko61p",
+  "descriptionHistory": [
+    {
+      "description": "In the Portfolio section of the landing page, add 3 embedded YouTube video cards. Each card should have:\n- A YouTube video embedded using an iframe (use these example video IDs: dQw4w9WgXcQ, jNQXAC9IVRw, 9bZkp7q19f0)\n- A title below the video\n- A short description\n- Warm card design with shadow and rounded corners\nThe user will replace the video IDs with their own. Make it easy to find where to edit them in the code.",
+      "timestamp": "2026-02-23T20:15:17.892Z",
+      "source": "initial"
+    }
+  ],
+  "startedAt": "2026-02-23T20:15:27.897Z",
+  "updatedAt": "2026-02-23T20:21:31.045Z",
+  "planSpec": {
+    "status": "approved",
+    "version": 1,
+    "reviewedByUser": true,
+    "generatedAt": "2026-02-23T20:16:00.475Z",
+    "tasks": [
+      {
+        "id": "T001",
+        "description": "Update PortfolioSection component to use embedded iframes instead of modal",
+        "filePath": "src/components/PortfolioSection.astro",
+        "status": "completed"
+      },
+      {
+        "id": "T002",
+        "description": "Remove modal-related HTML and scripts from PortfolioSection",
+        "filePath": "src/components/PortfolioSection.astro",
+        "status": "completed"
+      },
+      {
+        "id": "T003",
+        "description": "Update portfolio grid and card styles for embedded videos",
+        "filePath": "src/components/PortfolioSection.astro",
+        "status": "completed"
+      },
+      {
+        "id": "T004",
+        "description": "Update index.astro to pass 3 videos with specified video IDs",
+        "filePath": "src/pages/index.astro",
+        "status": "completed"
+      }
+    ],
+    "tasksTotal": 4,
+    "tasksCompleted": 4,
+    "approvedAt": "2026-02-23T20:17:47.257Z",
+    "currentTaskId": "T004"
+  }
+}
