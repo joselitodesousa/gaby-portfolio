@@ -30,115 +30,81 @@ interface Project {
 
 const cvData = {
   personalInfo: {
-    name: "Gabriela Rodriguez",
-    title: "Full-Stack Developer & Digital Designer",
-    email: "contact@gaby.dev",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    website: "https://gaby.dev",
-    bio: "Passionate full-stack developer with 5+ years of experience creating beautiful, functional digital experiences. Specialized in modern web technologies and user-centered design.",
+    name: "Gabriela De Sousa",
+    title: "Producción audiovisual | Edición | Community manager | content manager |",
+    email: "gabyalexa10.gds@gmail.com        ",
+    phone: "+58 (424) 2179360",
+    location: "Caracas - Venezuela",
+    website: "https://gaby-portfolio-eta.vercel.app/",
+    bio: "Productora audiovisual y Community Manager especializada en videos publicitarios y contenido digital para marcas, campañas y proyectos. Desarrollo guiones, grabo, edito y gestiono contenido para redes sociales, alineando cada pieza con los objetivos de comunicación y el posicionamiento de marca.",
   },
 
   experience: [
     {
-      title: "Senior Developer",
-      company: "TechCorp Solutions",
-      period: "2022 - Present",
-      description: "Lead full-stack development projects and mentor junior developers",
+      title: "Community manager",
+      period: "2021 - 2025",
+      description: "Apoyo en estrategia digital, producción de contenido audiovisual y coordinación creativa para asegurar el posicionamiento de la marca.",
       highlights: [
-        "Architected microservices platform using Node.js and Docker",
-        "Improved application performance by 40% through optimization",
-        "Led team of 5 developers to deliver 3 major projects on time",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
+        "@cirujanoaldia (2021)",
+        "@momentum_vzla (2022)",
+        "@campavilakids (2022)",
+        "@fhostal (2022)",
+        "@dubaiexpresschacao (2022)",
+        "@lasrosasvzla (2022)",
+        "@saporitocaffe (2025)",
       ],
     },
     {
-      title: "Full-Stack Developer",
-      company: "Digital Innovations Inc",
+      title: "Productora audiovisual   ",
       period: "2020 - 2022",
       description: "Developed and maintained web applications for enterprise clients",
       highlights: [
-        "Built responsive web applications using React and Node.js",
-        "Designed and implemented REST APIs handling 10M+ requests/month",
-        "Collaborated with UX team to create user-centric interfaces",
-        "Implemented automated testing increasing code coverage to 85%",
+        "@hagoccs - UCAB (2025)", 
+        "@academiabtcucab (2025 -2026)",
       ],
     },
     {
-      title: "Junior Developer",
-      company: "StartupXYZ",
-      period: "2019 - 2020",
+      title: "Productora",
+      period: "2024 - 2024",
       description: "Contributed to frontend and backend development",
       highlights: [
-        "Developed new features for customer-facing web platform",
-        "Fixed critical bugs and improved code quality",
-        "Learned and applied modern development best practices",
+        "@kitchenlab - UCAB (2024)",
       ],
     },
   ] as Experience[],
 
   education: [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of California",
-      year: "2019",
-      description: "Graduated with distinction. Focus on Software Engineering and Web Technologies.",
+      degree: "Lic. Comunicación Social",
+      school: "Universidad Católica Andrés Bello",
+      year: "Decimo Semestre - en curso",
+      description: "",
     },
     {
-      degree: "Professional Certification",
-      school: "Google Cloud Academy",
-      year: "2021",
-      description: "Cloud Architecture and Development certification",
     },
   ] as Education[],
 
   skills: [
     {
-      category: "Frontend",
-      items: ["React", "TypeScript", "Astro", "HTML/CSS", "Responsive Design", "Vue.js", "Next.js"],
+      category: "Producción de contenido",
+      items: ["Guionización", "Producción", "Grabación", "Storytelling", "Direccióon creativa"],
     },
     {
-      category: "Backend",
-      items: ["Node.js", "Python", "Express.js", "MongoDB", "PostgreSQL", "GraphQL"],
+      category: "Postproducción",
+      items: ["Edición", "Premiere", "Capcut"],
     },
     {
-      category: "DevOps & Tools",
-      items: ["Docker", "Kubernetes", "Git", "AWS", "CI/CD", "Linux"],
+      category: "Gestión de marca y redes",
+      items: ["Planificación", "Estrategias", "Posicionamiento"],
     },
     {
-      category: "Design",
-      items: ["UI/UX Design", "Figma", "Responsive Design", "Accessibility", "Web Performance"],
+      category: "Gestión de Proyecto",
+      items: ["Planificación", "Coordinación creativa", "Ejecución"],
     },
   ] as Skill[],
 
-  projects: [
-    {
-      name: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory management and payment integration",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
-    },
-    {
-      name: "Analytics Dashboard",
-      description: "Real-time analytics dashboard for tracking business metrics and user behavior",
-      technologies: ["React", "GraphQL", "PostgreSQL", "D3.js"],
-      link: "#",
-    },
-    {
-      name: "Mobile App",
-      description: "Cross-platform mobile application for task management and collaboration",
-      technologies: ["React Native", "Firebase", "Redux"],
-      link: "#",
-    },
-    {
-      name: "Content Management System",
-      description: "Headless CMS with intuitive admin interface and powerful API",
-      technologies: ["Next.js", "GraphQL", "PostgreSQL", "AWS"],
-      link: "#",
-    },
-  ] as Project[],
 
-  languages: ["English (Native)", "Spanish (Fluent)", "French (Intermediate)"],
+  languages: ["Español (Nativo)", "Ingles (Intermedio)", "Portugues (Básico)"],
   certifications: [
     "AWS Certified Solutions Architect",
     "Google Cloud Professional Cloud Architect",
@@ -182,7 +148,7 @@ const cvData = {
     <div class="cv-content">
       <!-- Experience Section -->
       <section class="cv-section">
-        <h2 class="section-title">Professional Experience</h2>
+        <h2 class="section-title">Experiencia Profesional</h2>
         <div class="experience-list">
           {cvData.experience.map((job) => (
             <div class="experience-item">
@@ -223,7 +189,7 @@ const cvData = {
 
       <!-- Skills Section -->
       <section class="cv-section">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">Habilidades Profesionales</h2>
         <div class="skills-grid">
           {cvData.skills.map((skillGroup) => (
             <div class="skill-category">
@@ -238,26 +204,6 @@ const cvData = {
         </div>
       </section>
 
-      <!-- Projects Section -->
-      <section class="cv-section">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-          {cvData.projects.map((project) => (
-            <div class="project-card">
-              <h3 class="project-name">{project.name}</h3>
-              <p class="project-description">{project.description}</p>
-              <div class="project-technologies">
-                {project.technologies.map((tech) => (
-                  <span class="tech-badge">{tech}</span>
-                ))}
-              </div>
-              {project.link && (
-                <a href={project.link} class="project-link">View Project →</a>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
 
       <!-- Languages Section -->
       <section class="cv-section">
@@ -271,27 +217,7 @@ const cvData = {
         </div>
       </section>
 
-      <!-- Certifications Section -->
-      <section class="cv-section">
-        <h2 class="section-title">Certifications</h2>
-        <div class="certifications-list">
-          {cvData.certifications.map((cert) => (
-            <div class="certification-item">
-              <span class="cert-badge">✓</span>
-              <span>{cert}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
 
-    <!-- Print Button -->
-    <div class="print-button-container">
-      <button class="print-button" onclick="window.print()">
-        🖨️ Print or Save as PDF
-      </button>
-    </div>
-  </div>
 </BaseLayout>
 
 <style>
