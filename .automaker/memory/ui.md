@@ -68,3 +68,17 @@ usageStats:
 - **Problem solved:** Hover effects (scale, shadow) need adjustment across device sizes to prevent jank and maintain touch-friendliness
 - **Why this works:** Mobile devices don't have hover - touch interactions shouldn't trigger scale(1.02) as it reflows content; shadow reduction prevents layout shift on lower-powered devices
 - **Trade-offs:** More CSS code to maintain; harder to predict behavior across all screen sizes. But prevents the 'jumpy' mobile interaction that frustrates users
+
+### Structuring experience data as flat list with chronological ordering (newest first) rather than grouped timeline (2026-05-22)
+- **Context:** Multiple concurrent positions in 2026 needed clear presentation without visual timeline artifacts
+- **Why:** Flat chronological list prevents z-index stacking issues with overlapping timeline markers and simplifies responsive mobile layout where vertical space is constrained
+- **Rejected:** Timeline component with visual connectors would require absolute positioning management and media queries for mobile reflow
+- **Trade-offs:** List is simpler to scan but loses temporal relationship visualization; gained: responsive stability and simpler CSS
+- **Breaking if changed:** Converting to timeline component requires introducing position context containers and managing overflow on small screens
+
+### Organizing skills into three categorical sections (Audiovisual, Corporativo y Digital, Software e IA) with explicit h3.category-title structure for scoping (2026-05-22)
+- **Context:** Skills list needed both semantic categorization and reliable CSS selector targeting for test verification
+- **Why:** Explicit category headers create natural visual separation while providing unambiguous DOM selectors; category titles become accessible landmarks
+- **Rejected:** Data attributes (data-category) would require additional attribute management; CSS Grid with implicit grouping loses semantic meaning
+- **Trade-offs:** Category headers add markup but gain accessibility (semantic h3) and simpler test selectors; became necessary for test robustness
+- **Breaking if changed:** Removing h3.category-title breaks CSS scoping and test selectors; changing structure to div wrappers requires updating selector specificity

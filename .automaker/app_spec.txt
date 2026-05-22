@@ -100,7 +100,7 @@ Use ONLY: Astro and Tailwind CSS. Works with npm run dev. Ready for Vercel.</des
 3. Footer: Update footer on ALL pages to show only these social networks with icons: LinkedIn, Instagram, Telegram. Use placeholder URLs that the user can edit in the code.</description>
     </feature>
     <feature>
-      <name>Gaby portafolio </name>
+      <name>Gaby portafolio</name>
       <description>Create a portfolio website for a social communicator using Astro and Tailwind CSS. Requirements:
 MAIN PAGE (index.astro):
 - Hero section with circular avatar image (/public/avatar.jpg) and name/title
@@ -122,6 +122,57 @@ BLOG PAGE (/blog):
 NAVIGATION: Home, CV (/cv), Blog (/blog), Contáctame (scrolls to footer)
 Design: warm colors (coral #FF6B6B, amber #FFB347, cream #FFF8E7), modern, fresh, mobile-first responsive
 Use ONLY: Astro and Tailwind CSS. Works with npm run dev. Ready for Vercel.</description>
+    </feature>
+    <feature>
+      <name>Add YouTube video cards to portfolio section</name>
+      <description>In the Portfolio section of the landing page, add 3 embedded YouTube video cards. Each card should have:
+- A YouTube video embedded using an iframe (use these example video IDs: dQw4w9WgXcQ, jNQXAC9IVRw, 9bZkp7q19f0)
+- A title below the video
+- A short description
+- Warm card design with shadow and rounded corners
+The user will replace the video IDs with their own. Make it easy to find where to edit them in the code.</description>
+    </feature>
+    <feature>
+      <name>Update resume page with new elements</name>
+      <description> Modificar la página de curriculum vitae, para agregar nuevos elementos
+
+necesito agregar lo siguiente: 
+
+HABILIDADES Y HERRAMIENTAS
+Audiovisual: preproducción, producción general, producción ejecutiva y general dirección, asistencia de dirección, planificación de rodaje, logística, presupuesto, storytelling, guion, grabación y edición de video.
+Corporativo y digital: producción de eventos, comunicación visual, contenido institucional, redes sociales, estrategia digital, posicionamiento de marca, community management y adaptación de mensajes a formatos audiovisuales.
+Software e IA: Adobe Premiere, CapCut, ChatGPT, Gemini, Claude, Adobe Firefly, Leonardo.Ai y Whisk.
+
+En experiencia profesional, agregar de primero: 
+
+Creadora de Contenido Audiovisual | Academia BT&amp;C / CIAP UCAB
+2026 - Actualidad
+• Desarrollo de guiones, grabación y edición de videos educativos, promocionales e institucionales.
+• Adaptación de información académica a piezas audiovisuales claras, dinámicas y atractivas para audiencias digitales.
+• Apoyo en la comunicación y difusión de cursos, diplomados y actividades formativas.
+Directora | Documental “Guardianes Invisibles: Tiburones en Venezuela”
+Proyecto documental académico | UCAB | 2026 - En curso
+• Dirección general del documental enfocado en la conservación y percepción de los tiburones en Venezuela.
+• Desarrollo de propuesta narrativa, línea temática, enfoque audiovisual e investigación previa.
+• Coordinación de entrevistas, planificación de rodaje y organización del material documental.
+Productora Ejecutiva y Productora General | Cortometraje “Guardia Baja”
+Proyecto académico audiovisual | UCAB | 2026 – En curso
+• Coordinación general del cortometraje durante preproducción y rodaje.
+• Elaboración, seguimiento y control del presupuesto de producción.
+• Gestión de equipo, recursos, logística, permisos, materiales y requerimientos del rodaje.
+• Contacto con patrocinadores.
+Asistente de Dirección | Comercial para redes sociales de Curda24
+Producción audiovisual para medios digitales | 2026 – En curso
+• Apoyo a la dirección durante la planificación, ejecución y coordinación del comercial.
+• Seguimiento de actividades en set, tiempos de captura y comunicación con el equipo técnico y creativo.
+Productora General | Programa de youtube “HagoCcs”
+• Coordinar la produccióny la planificación logística para las grabaciones.
+• Elaboración, seguimiento y control del presupuesto de producción.
+• Gestión de equipo, recursos, permisos, materiales y requerimientos del rodaje.
+
+
+Agregar una foto circular, la cual tengo que suministrar
+</description>
     </feature>
   </implemented_features>
 </project_specification>

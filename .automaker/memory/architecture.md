@@ -46,3 +46,13 @@ usageStats:
 - **Problem solved:** AboutContent uses two-column grid with images on left, text/bio on right. Codebase already has AboutSection using same pattern.
 - **Why this works:** Pattern is already validated in codebase, users expect it, reduces design decisions, ensures visual hierarchy matches existing components.
 - **Trade-offs:** Easier: leverages existing CSS grid patterns, predictable responsive behavior at 768px breakpoint. Harder: less design flexibility, similar pages look similar (less differentiation).
+
+#### [Pattern] Keeping profile photo reference in markup (gaby-profile.png) instead of hardcoding paths, with public directory asset resolution (2026-05-22)
+- **Problem solved:** Profile photo needed to be circular and responsive across CV page
+- **Why this works:** Astro's public directory handling automatically resolves asset paths at build time, avoiding hardcoded relative path fragility across different deployment contexts
+- **Trade-offs:** Public assets aren't tree-shaken but provide simpler DX; public directory images load without processing pipeline
+
+#### [Pattern] Using Astro static site generation with astro check validation instead of runtime testing for CV page correctness (2026-05-22)
+- **Problem solved:** Required verification that new CV content renders without errors in single-page resume application
+- **Why this works:** Astro's build-time compilation catches template syntax errors, component resolution failures, and data structure mismatches before deployment; eliminates runtime surprises
+- **Trade-offs:** Build-time validation catches structure errors but misses CSS application bugs; grep verification of content presence is literal and misses visual regressions

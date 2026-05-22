@@ -41,6 +41,53 @@ const cvData = {
 
   experience: [
     {
+      title: "Creadora de Contenido Audiovisual",
+      company: "Academia BT&C / CIAP UCAB",
+      period: "2026 - Actualidad",
+      description: "Desarrollo de guiones, grabación y edición de videos educativos, promocionales e institucionales. Adaptación de información académica a piezas audiovisuales claras, dinámicas y atractivas para audiencias digitales. Apoyo en la comunicación y difusión de cursos, diplomados y actividades formativas.",
+      highlights: [],
+    },
+    {
+      title: "Directora",
+      company: "Documental \"Guardianes Invisibles: Tiburones en Venezuela\" - Proyecto académico | UCAB",
+      period: "2026 - En curso",
+      description: "Dirección general del documental enfocado en la conservación y percepción de los tiburones en Venezuela.",
+      highlights: [
+        "Desarrollo de propuesta narrativa, línea temática, enfoque audiovisual e investigación previa",
+        "Coordinación de entrevistas, planificación de rodaje y organización del material documental",
+      ],
+    },
+    {
+      title: "Productora Ejecutiva y Productora General",
+      company: "Cortometraje \"Guardia Baja\" - Proyecto académico audiovisual | UCAB",
+      period: "2026 – En curso",
+      description: "Coordinación general del cortometraje durante preproducción y rodaje.",
+      highlights: [
+        "Elaboración, seguimiento y control del presupuesto de producción",
+        "Gestión de equipo, recursos, logística, permisos, materiales y requerimientos del rodaje",
+        "Contacto con patrocinadores",
+      ],
+    },
+    {
+      title: "Asistente de Dirección",
+      company: "Comercial para redes sociales de Curda24 - Producción audiovisual para medios digitales",
+      period: "2026 – En curso",
+      description: "Apoyo a la dirección durante la planificación, ejecución y coordinación del comercial.",
+      highlights: [
+        "Seguimiento de actividades en set, tiempos de captura y comunicación con el equipo técnico y creativo",
+      ],
+    },
+    {
+      title: "Productora General",
+      company: "Programa de youtube \"HagoCcs\"",
+      period: "2025 - 2026",
+      description: "Coordinación de la producción y planificación logística para las grabaciones.",
+      highlights: [
+        "Elaboración, seguimiento y control del presupuesto de producción",
+        "Gestión de equipo, recursos, permisos, materiales y requerimientos del rodaje",
+      ],
+    },
+    {
       title: "Community manager",
       period: "2021 - 2025",
       description: "Apoyo en estrategia digital, producción de contenido audiovisual y coordinación creativa para asegurar el posicionamiento de la marca.",
@@ -50,7 +97,7 @@ const cvData = {
         "@campavilakids (2022)",
         "@fhostal (2022)",
         "@dubaiexpresschacao (2022)",
-        "@lasrosasvzla (2022)",
+        "@lasrosasvla (2022)",
         "@saporitocaffe (2025)",
       ],
     },
@@ -59,7 +106,7 @@ const cvData = {
       period: "2025 - 2026",
       description: "Producción general de contenidos audiovisuales y desarrollo de piezas promocionales para redes sociales.",
       highlights: [
-        "@hagoccs - UCAB (2025)", 
+        "@hagoccs - UCAB (2025)",
         "@academiabtcucab (2025 -2026)",
       ],
     },
@@ -86,20 +133,16 @@ const cvData = {
 
   skills: [
     {
-      category: "Producción de contenido",
-      items: ["Guionización", "Producción", "Grabación", "Storytelling", "Dirección creativa"],
+      category: "Audiovisual",
+      items: ["Preproducción", "Producción general", "Producción ejecutiva", "Dirección general", "Asistencia de dirección", "Planificación de rodaje", "Logística", "Presupuesto", "Storytelling", "Guionización", "Grabación", "Edición de video"],
     },
     {
-      category: "Postproducción",
-      items: ["Edición", "Premiere", "Capcut"],
+      category: "Corporativo y Digital",
+      items: ["Producción de eventos", "Comunicación visual", "Contenido institucional", "Redes sociales", "Estrategia digital", "Posicionamiento de marca", "Community management", "Adaptación de mensajes audiovisuales"],
     },
     {
-      category: "Gestión de marca y redes",
-      items: ["Planificación", "Estrategias", "Posicionamiento"],
-    },
-    {
-      category: "Gestión de Proyecto",
-      items: ["Planificación", "Coordinación creativa", "Ejecución"],
+      category: "Software e IA",
+      items: ["Adobe Premiere", "CapCut", "ChatGPT", "Gemini", "Claude", "Adobe Firefly", "Leonardo.Ai", "Whisk"],
     },
   ] as Skill[],
 
@@ -120,6 +163,9 @@ const cvData = {
   <div class="cv-container">
     <!-- Header Section -->
     <header class="cv-header">
+      <div class="profile-section">
+        <img src="/gaby-profile.png" alt="Gabriela De Sousa" class="profile-photo" />
+      </div>
       <div class="header-content">
         <h1 class="name">{cvData.personalInfo.name}</h1>
         <p class="title">{cvData.personalInfo.title}</p>
@@ -236,9 +282,24 @@ const cvData = {
     color: white;
     padding: 3rem 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     gap: 2rem;
     align-items: start;
+  }
+
+  .profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .header-content {
@@ -611,6 +672,15 @@ const cvData = {
       grid-template-columns: 1fr;
       gap: 1.5rem;
       padding: 2rem 1.5rem;
+    }
+
+    .profile-section {
+      margin-bottom: 1rem;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
     }
 
     .name {

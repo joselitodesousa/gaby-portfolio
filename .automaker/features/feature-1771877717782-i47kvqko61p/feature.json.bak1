@@ -16,7 +16,7 @@
   "dependencies": [],
   "workMode": "current",
   "titleGenerating": false,
-  "status": "waiting_approval",
+  "status": "verified",
   "id": "feature-1771877717782-i47kvqko61p",
   "descriptionHistory": [
     {
@@ -26,7 +26,7 @@
     }
   ],
   "startedAt": "2026-02-23T20:15:27.897Z",
-  "updatedAt": "2026-02-23T20:21:31.113Z",
+  "updatedAt": "2026-02-23T20:21:31.159Z",
   "planSpec": {
     "status": "approved",
     "version": 1,
