@@ -56,3 +56,10 @@ usageStats:
 - **Problem solved:** Required verification that new CV content renders without errors in single-page resume application
 - **Why this works:** Astro's build-time compilation catches template syntax errors, component resolution failures, and data structure mismatches before deployment; eliminates runtime surprises
 - **Trade-offs:** Build-time validation catches structure errors but misses CSS application bugs; grep verification of content presence is literal and misses visual regressions
+
+### Separated professional profile into dedicated data field (professionalProfile) instead of embedding in inline text (2026-05-22)
+- **Context:** Professional summary needs to be maintainable, reusable, and properly formatted separately from component structure.
+- **Why:** Centralizing content in cvData object enables: single source of truth for bio updates, potential reuse in other pages/templates, easier testing, clearer data structure for future API migration
+- **Rejected:** Keeping it as hardcoded JSX text within component template would tangle content with presentation
+- **Trade-offs:** Slight overhead of additional object property, but gains maintainability and separation of concerns. Makes future localization easier.
+- **Breaking if changed:** If this pattern isn't followed consistently, profile text becomes scattered across multiple files and sync issues emerge

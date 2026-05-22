@@ -2,6 +2,20 @@
   "version": 1,
   "events": [
     {
+      "id": "evt-1779476891124-c431fd8d",
+      "trigger": "feature_success",
+      "timestamp": "2026-05-22T19:08:11.124Z",
+      "featureName": "Remove old bio, add professional profile and skills sections, rename experience",
+      "featureId": "feature-1779476667123-ibikvzbs6zk"
+    },
+    {
+      "id": "evt-1779476667191-01f53693",
+      "trigger": "feature_created",
+      "timestamp": "2026-05-22T19:04:27.191Z",
+      "featureName": "Untitled Feature",
+      "featureId": "feature-1779476667123-ibikvzbs6zk"
+    },
+    {
       "id": "evt-1779475450210-a787e6f7",
       "trigger": "feature_success",
       "timestamp": "2026-05-22T18:44:10.210Z",

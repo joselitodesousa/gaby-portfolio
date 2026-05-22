@@ -36,7 +36,7 @@ const cvData = {
     phone: "+58 (424) 2179360",
     location: "Caracas - Venezuela",
     website: "https://gaby-portfolio-eta.vercel.app/",
-    bio: "Productora audiovisual y Community Manager especializada en videos publicitarios y contenido digital para marcas, campañas y proyectos. Desarrollo guiones, grabo, edito y gestiono contenido para redes sociales, alineando cada pieza con los objetivos de comunicación y el posicionamiento de marca.",
+    bio: "",
   },
 
   experience: [
@@ -131,6 +131,8 @@ const cvData = {
     },
   ] as Education[],
 
+  professionalProfile: "Estudiante de Comunicación Social en la Universidad Católica Andrés Bello, orientada a la producción audiovisual, comunicación corporativa y contenido digital. Experiencia inicial en dirección documental, producción ejecutiva y general, asistencia de dirección, guion, grabación, edición de video y gestión de contenido para marcas e instituciones. Perfil creativo, organizado y estratégico, con manejo de herramientas digitales e IA generativa para apoyar procesos de ideación, guionización y conceptualización visual.",
+
   skills: [
     {
       category: "Audiovisual",
@@ -192,9 +194,32 @@ const cvData = {
     </header>
 
     <div class="cv-content">
+      <!-- Professional Profile Section -->
+      <section class="cv-section">
+        <h2 class="section-title">PERFIL PROFESIONAL</h2>
+        <p class="profile-text">{cvData.professionalProfile}</p>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="cv-section">
+        <h2 class="section-title">HABILIDADES Y HERRAMIENTAS</h2>
+        <div class="skills-grid">
+          {cvData.skills.map((skillGroup) => (
+            <div class="skill-category">
+              <h3 class="category-title">{skillGroup.category}</h3>
+              <div class="skill-items">
+                {skillGroup.items.map((skill) => (
+                  <span class="skill-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <!-- Experience Section -->
       <section class="cv-section">
-        <h2 class="section-title">Experiencia Profesional</h2>
+        <h2 class="section-title">EXPERIENCIA Y PROYECTOS DESTACADOS</h2>
         <div class="experience-list">
           {cvData.experience.map((job) => (
             <div class="experience-item">
@@ -232,24 +257,6 @@ const cvData = {
           ))}
         </div>
       </section>
-
-      <!-- Skills Section -->
-      <section class="cv-section">
-        <h2 class="section-title">Habilidades Profesionales</h2>
-        <div class="skills-grid">
-          {cvData.skills.map((skillGroup) => (
-            <div class="skill-category">
-              <h3 class="category-title">{skillGroup.category}</h3>
-              <div class="skill-items">
-                {skillGroup.items.map((skill) => (
-                  <span class="skill-tag">{skill}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
 
       <!-- Languages Section -->
       <section class="cv-section">
@@ -367,6 +374,13 @@ const cvData = {
 
   .cv-section {
     margin-bottom: 2rem;
+  }
+
+  .profile-text {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
   }
 
   .cv-section:last-child {

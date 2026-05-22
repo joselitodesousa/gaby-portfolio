@@ -82,3 +82,20 @@ usageStats:
 - **Rejected:** Data attributes (data-category) would require additional attribute management; CSS Grid with implicit grouping loses semantic meaning
 - **Trade-offs:** Category headers add markup but gain accessibility (semantic h3) and simpler test selectors; became necessary for test robustness
 - **Breaking if changed:** Removing h3.category-title breaks CSS scoping and test selectors; changing structure to div wrappers requires updating selector specificity
+
+#### [Pattern] Moved professional profile section to top of CV, before skills and experience (2026-05-22)
+- **Problem solved:** CV page had professional summary buried in header bio field. Needed to give it prominence and proper structured placement.
+- **Why this works:** Professional profile establishes context and positioning before detailed skills/experience. Follows modern CV/resume hierarchy where narrative summary precedes lists. Makes scanning easier for recruiters.
+- **Trade-offs:** Slightly longer page top section, but improved information architecture. Takes more vertical space but improves hierarchy clarity.
+
+#### [Gotcha] Removed duplicate Skills section that appeared after Experience section instead of consolidating into single organized Skills section (2026-05-22)
+- **Situation:** CV had skills rendered in two different places - one new consolidated section and one legacy section lower in document
+- **Root cause:** Duplicate sections cause cognitive load and maintenance burden. Single source of truth (cvData.skills) should appear once, positioned strategically. Multiple renders of same data creates inconsistency risk.
+- **How to avoid:** One less section to scroll through. Cleaner structure but requires confirming all skills are in single cvData array.
+
+### Added explicit .profile-text CSS styling class rather than relying on inherited or default paragraph styles (2026-05-22)
+- **Context:** Professional profile needs consistent formatting separate from other paragraph text in CV
+- **Why:** Explicit styling enables future design tweaks (color, line-height, font-size, margins) without affecting other content. Creates maintainable class-based styling pattern. Allows A/B testing different profile presentations.
+- **Rejected:** Using generic paragraph styles would couple profile formatting to general typography, limiting flexibility
+- **Trade-offs:** Adds one more CSS class to maintain, but gains semantic clarity and styling independence for this critical section
+- **Breaking if changed:** If class is removed and style inlined, future modifications to general paragraph styling will unintentionally affect profile text

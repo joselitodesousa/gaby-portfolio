@@ -134,7 +134,7 @@ The user will replace the video IDs with their own. Make it easy to find where t
     </feature>
     <feature>
       <name>Update resume page with new elements</name>
-      <description> Modificar la página de curriculum vitae, para agregar nuevos elementos
+      <description>Modificar la página de curriculum vitae, para agregar nuevos elementos
 
 necesito agregar lo siguiente: 
 
@@ -171,7 +171,25 @@ Productora General | Programa de youtube “HagoCcs”
 • Gestión de equipo, recursos, permisos, materiales y requerimientos del rodaje.
 
 
-Agregar una foto circular, la cual tengo que suministrar
+Agregar una foto circular, la cual tengo que suministrar</description>
+    </feature>
+    <feature>
+      <name>Remove old bio, add professional profile and skills sections, rename experience</name>
+      <description>Necesito que en la página de Curriculum Vitae, se elimine, el siguiente texto: 
+
+Productora audiovisual y Community Manager especializada en videos publicitarios y contenido digital para marcas, campañas y proyectos. Desarrollo guiones, grabo, edito y gestiono contenido para redes sociales, alineando cada pieza con los objetivos de comunicación y el posicionamiento de marca.
+
+Agregues de primero las siguientes dos secciones: 
+
+PERFIL PROFESIONAL
+Estudiante de Comunicación Social en la Universidad Católica Andrés Bello, orientada a la producción audiovisual, comunicación corporativa y contenido digital. Experiencia inicial en dirección documental, producción ejecutiva y general, asistencia de dirección, guion, grabación, edición de video y gestión de contenido para marcas e instituciones. Perfil creativo, organizado y estratégico, con manejo de herramientas digitales e IA generativa para apoyar procesos de ideación, guionización y conceptualización visual.
+
+HABILIDADES Y HERRAMIENTAS
+Audiovisual: preproducción, producción general, producción ejecutiva y general dirección, asistencia de dirección, planificación de rodaje, logística, presupuesto, storytelling, guion, grabación y edición de video.
+Corporativo y digital: producción de eventos, comunicación visual, contenido institucional, redes sociales, estrategia digital, posicionamiento de marca, community management y adaptación de mensajes a formatos audiovisuales.
+Software e IA: Adobe Premiere, CapCut, ChatGPT, Gemini, Claude, Adobe Firefly, Leonardo.Ai y Whisk.
+
+Y cambies el títuo de Experiencia profesional por: EXPERIENCIA Y PROYECTOS DESTACADOS
 </description>
     </feature>
   </implemented_features>

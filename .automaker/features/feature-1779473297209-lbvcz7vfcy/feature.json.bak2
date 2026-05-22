@@ -23,7 +23,7 @@
   "dependencies": [],
   "workMode": "custom",
   "titleGenerating": false,
-  "status": "in_progress",
+  "status": "verified",
   "id": "feature-1779473297209-lbvcz7vfcy",
   "descriptionHistory": [
     {
@@ -38,5 +38,5 @@
     }
   ],
   "startedAt": "2026-05-22T18:36:51.395Z",
-  "updatedAt": "2026-05-22T18:36:52.364Z"
+  "updatedAt": "2026-05-22T18:43:51.220Z"
 }

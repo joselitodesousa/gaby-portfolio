@@ -1,0 +1,31 @@
+{
+  "category": "Uncategorized",
+  "description": "Necesito que en la página de Curriculum Vitae, se elimine, el siguiente texto: \n\nProductora audiovisual y Community Manager especializada en videos publicitarios y contenido digital para marcas, campañas y proyectos. Desarrollo guiones, grabo, edito y gestiono contenido para redes sociales, alineando cada pieza con los objetivos de comunicación y el posicionamiento de marca.\n\nAgregues de primero las siguientes dos secciones: \n\nPERFIL PROFESIONAL\nEstudiante de Comunicación Social en la Universidad Católica Andrés Bello, orientada a la producción audiovisual, comunicación corporativa y contenido digital. Experiencia inicial en dirección documental, producción ejecutiva y general, asistencia de dirección, guion, grabación, edición de video y gestión de contenido para marcas e instituciones. Perfil creativo, organizado y estratégico, con manejo de herramientas digitales e IA generativa para apoyar procesos de ideación, guionización y conceptualización visual.\n\nHABILIDADES Y HERRAMIENTAS\nAudiovisual: preproducción, producción general, producción ejecutiva y general dirección, asistencia de dirección, planificación de rodaje, logística, presupuesto, storytelling, guion, grabación y edición de video.\nCorporativo y digital: producción de eventos, comunicación visual, contenido institucional, redes sociales, estrategia digital, posicionamiento de marca, community management y adaptación de mensajes a formatos audiovisuales.\nSoftware e IA: Adobe Premiere, CapCut, ChatGPT, Gemini, Claude, Adobe Firefly, Leonardo.Ai y Whisk.\n\nY cambies el títuo de Experiencia profesional por: EXPERIENCIA Y PROYECTOS DESTACADOS\n",
+  "title": "Remove old bio, add professional profile and skills sections, rename experience",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": true,
+  "model": "claude-haiku",
+  "thinkingLevel": "ultrathink",
+  "reasoningEffort": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "skip",
+  "requirePlanApproval": false,
+  "dependencies": [],
+  "workMode": "current",
+  "titleGenerating": false,
+  "status": "waiting_approval",
+  "id": "feature-1779476667123-ibikvzbs6zk",
+  "descriptionHistory": [
+    {
+      "description": "Necesito que en la página de Curriculum Vitae, se elimine, el siguiente texto: \n\nProductora audiovisual y Community Manager especializada en videos publicitarios y contenido digital para marcas, campañas y proyectos. Desarrollo guiones, grabo, edito y gestiono contenido para redes sociales, alineando cada pieza con los objetivos de comunicación y el posicionamiento de marca.\n\nAgregues de primero las siguientes dos secciones: \n\nPERFIL PROFESIONAL\nEstudiante de Comunicación Social en la Universidad Católica Andrés Bello, orientada a la producción audiovisual, comunicación corporativa y contenido digital. Experiencia inicial en dirección documental, producción ejecutiva y general, asistencia de dirección, guion, grabación, edición de video y gestión de contenido para marcas e instituciones. Perfil creativo, organizado y estratégico, con manejo de herramientas digitales e IA generativa para apoyar procesos de ideación, guionización y conceptualización visual.\n\nHABILIDADES Y HERRAMIENTAS\nAudiovisual: preproducción, producción general, producción ejecutiva y general dirección, asistencia de dirección, planificación de rodaje, logística, presupuesto, storytelling, guion, grabación y edición de video.\nCorporativo y digital: producción de eventos, comunicación visual, contenido institucional, redes sociales, estrategia digital, posicionamiento de marca, community management y adaptación de mensajes a formatos audiovisuales.\nSoftware e IA: Adobe Premiere, CapCut, ChatGPT, Gemini, Claude, Adobe Firefly, Leonardo.Ai y Whisk.\n\nY cambies el títuo de Experiencia profesional por: EXPERIENCIA Y PROYECTOS DESTACADOS\n",
+      "timestamp": "2026-05-22T19:04:27.175Z",
+      "source": "initial"
+    }
+  ],
+  "startedAt": "2026-05-22T19:04:28.903Z",
+  "updatedAt": "2026-05-22T19:07:50.314Z",
+  "justFinishedAt": "2026-05-22T19:07:50.314Z"
+}
