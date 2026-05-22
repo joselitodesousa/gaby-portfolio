@@ -63,3 +63,8 @@ usageStats:
 - **Rejected:** Keeping it as hardcoded JSX text within component template would tangle content with presentation
 - **Trade-offs:** Slight overhead of additional object property, but gains maintainability and separation of concerns. Makes future localization easier.
 - **Breaking if changed:** If this pattern isn't followed consistently, profile text becomes scattered across multiple files and sync issues emerge
+
+#### [Gotcha] Section order is implicit in JSX structure, not explicit in data model (2026-05-22)
+- **Situation:** CV rendering logic has no centralized section manifest or ordering configuration
+- **Root cause:** This is the natural result of template-driven rendering, but creates tight coupling between UI markup and information architecture
+- **How to avoid:** Reduces boilerplate for simple cases but makes bulk changes, conditional sections, or A/B testing section layouts require template modifications

@@ -2,6 +2,20 @@
   "version": 1,
   "events": [
     {
+      "id": "evt-1779477179693-7c8d9224",
+      "trigger": "feature_success",
+      "timestamp": "2026-05-22T19:12:59.693Z",
+      "featureName": "Reorder skills and tools section to end",
+      "featureId": "feature-1779477105432-6xilqdt0ctf"
+    },
+    {
+      "id": "evt-1779477106134-0fb6a20d",
+      "trigger": "feature_created",
+      "timestamp": "2026-05-22T19:11:46.134Z",
+      "featureName": "Untitled Feature",
+      "featureId": "feature-1779477105432-6xilqdt0ctf"
+    },
+    {
       "id": "evt-1779476891124-c431fd8d",
       "trigger": "feature_success",
       "timestamp": "2026-05-22T19:08:11.124Z",

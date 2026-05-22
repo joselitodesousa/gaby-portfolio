@@ -189,7 +189,14 @@ Audiovisual: preproducción, producción general, producción ejecutiva y genera
 Corporativo y digital: producción de eventos, comunicación visual, contenido institucional, redes sociales, estrategia digital, posicionamiento de marca, community management y adaptación de mensajes a formatos audiovisuales.
 Software e IA: Adobe Premiere, CapCut, ChatGPT, Gemini, Claude, Adobe Firefly, Leonardo.Ai y Whisk.
 
-Y cambies el títuo de Experiencia profesional por: EXPERIENCIA Y PROYECTOS DESTACADOS
+Y cambies el títuo de Experiencia profesional por: EXPERIENCIA Y PROYECTOS DESTACADOS</description>
+    </feature>
+    <feature>
+      <name>Reorder skills and tools section to end</name>
+      <description>La sección habilidades y herramientas la quiero de último, ates de lenguajes
+
+
+
 </description>
     </feature>
   </implemented_features>

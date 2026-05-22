@@ -1,0 +1,32 @@
+{
+  "category": "Uncategorized",
+  "description": "La sección habilidades y herramientas la quiero de último, ates de lenguajes\n\n\n\n",
+  "title": "Reorder skills and tools section to end",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": true,
+  "model": "claude-haiku",
+  "thinkingLevel": "ultrathink",
+  "reasoningEffort": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "skip",
+  "requirePlanApproval": false,
+  "dependencies": [],
+  "workMode": "current",
+  "titleGenerating": false,
+  "status": "verified",
+  "id": "feature-1779477105432-6xilqdt0ctf",
+  "descriptionHistory": [
+    {
+      "description": "La sección habilidades y herramientas la quiero de último, ates de lenguajes\n\n\n\n",
+      "timestamp": "2026-05-22T19:11:46.114Z",
+      "source": "initial"
+    }
+  ],
+  "startedAt": "2026-05-22T19:11:47.541Z",
+  "updatedAt": "2026-05-22T19:12:45.021Z",
+  "justFinishedAt": "2026-05-22T19:12:44.981Z",
+  "summary": "## Summary: Reorder skills and tools section to end\n\n### Changes Implemented\n- Moved \"HABILIDADES Y HERRAMIENTAS\" (Skills and Tools) section from 2nd position to 4th position (before Languages section)\n- Reorganized the CV sections to display: Professional Profile → Experience → Education → Skills and Tools → Languages\n\n### Files Modified\n- `src/pages/cv.astro` - Reordered the section JSX elements within the cv-content div\n\n### Notes for Developer\n- The visual styling and functionality remain unchanged\n- All section content, components, and styling (CSS) are preserved\n- The reordering only affects the display order of sections on the rendered CV page"
+}

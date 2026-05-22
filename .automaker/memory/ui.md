@@ -99,3 +99,10 @@ usageStats:
 - **Rejected:** Using generic paragraph styles would couple profile formatting to general typography, limiting flexibility
 - **Trade-offs:** Adds one more CSS class to maintain, but gains semantic clarity and styling independence for this critical section
 - **Breaking if changed:** If class is removed and style inlined, future modifications to general paragraph styling will unintentionally affect profile text
+
+### Section reordering via direct JSX manipulation rather than data-driven ordering (2026-05-22)
+- **Context:** CV sections needed to be reordered from Skills-2nd to Skills-4th position
+- **Why:** Direct JSX reordering is simpler for static section definitions and avoids needing to change the data structure or add ordering metadata
+- **Rejected:** Adding an 'order' property to cvData and using sort() - would require schema changes and runtime computation
+- **Trade-offs:** Easier immediate change but harder to make dynamic reordering in future; users cannot customize section order without code changes
+- **Breaking if changed:** Any code expecting Skills section to appear 2nd (e.g., CSS nth-child selectors targeting specific positions, or navigation logic assuming section order)
